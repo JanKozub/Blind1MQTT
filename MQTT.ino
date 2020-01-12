@@ -22,7 +22,7 @@ void reconnect() {
     if (client.connect(clientId.c_str())) {
       Serial.println("connected");
 
-      client.publish("blind1", "blind1");
+      client.publish("blind1,", "1");
       client.subscribe("blind1Sub");
     } else {
       Serial.print("failed, rc=");
@@ -41,7 +41,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
   }
   debugPayload(topic, output);
   if (output.equals("UPDATE")) {
-    String msg = "blind1" + String(state);
+    String msg = "blind1," + String(state);
     client.publish("blind1", msg.c_str());
   } else if (output.equals("ACTIVE")) {
   } else {

@@ -59,7 +59,7 @@ void loop() {
 
     if (now - lastReconnectAttempt > 5000) {
       lastReconnectAttempt = now;
-      String msg = "blind1" + String(state);
+      String msg = "blind1," + String(state);
       Serial.print("Publish message: ");
       Serial.println(msg);
       client.publish("blind1", msg.c_str());
