@@ -10,10 +10,10 @@
 int currentPos = 0;
 int incomingByte = 0;
 int minValue = 100;
-int maxValue = 950;
+int maxValue = 975;
 int steps[] = {minValue, 0, 0, 0, maxValue};
 int absoluteMinValue = 30;
-int absoluteMaxValue = 970;
+int absoluteMaxValue = 985;
 const char* ssid;
 const char* password;
 const char* mqtt_server;

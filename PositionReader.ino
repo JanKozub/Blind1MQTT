@@ -8,7 +8,8 @@ void setPotRanges() {
 int getPosition(boolean type) {
   int potValue = analogRead(potPin);
 
-  int currentPos = map(potValue, minValue, maxValue + 5, 0, 5);
+  int currentPos = map(potValue, minValue, maxValue, 0, 4);
+  Serial.println(currentPos);
 
   if(type == STEP){
     return currentPos;
